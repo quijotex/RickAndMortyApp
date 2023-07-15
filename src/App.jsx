@@ -23,7 +23,7 @@ function App() {
   }, []);
 
 
-  const handleLocation = (e) => {
+  const submit = (e) => {
     e.preventDefault()
 
     axios
@@ -50,48 +50,58 @@ function App() {
   for (let i = 1; i <= totalPages; i++) {
     pages.push(i);
   }
+
   return (
     <>
     <header className='header-img'>
       <img className="logo-header" src={logo} alt=''/>
     </header>
     <section className='section-characters'>
-      <div className='button-search'>
-          <input type='text' id="inputId" placeholder='Type a number between 1 and 126'
-              value={searchId}
-              onChange={(e) => 
-              setSearchId(e.target.value)}/>
-            <button type="text" onClick={handleLocation}>Search <i className='bx bx-search-alt-2 bx-xs'></i></button>
-        </div>
-        <div className='information-general'>
-        <Location
-            url={locationRandom}/>
-        </div>
-          <ul>
-            {characterPaginated?.map((character) => (
-            <ResidentInfo
-            key={character}
-            url={character}/> )
-            )}
-            </ul>
-      </section>
-      <footer className='footer-pages'>
-            <button
+    
+       <div className='div-characters'>
+       <div className='welcome'>
+            <h2>Welcome to this crazy universe!</h2>
+            </div>
+          <div className='button-search'>
+            <form onSubmit={(e) => submit(e)}>
+              <input type='text' id="inputId" placeholder='Type a number between 1 and 126'
+                  value={searchId}
+                  onChange={(e) => 
+                  setSearchId(e.target.value)}/>
+                <button className="hover-button" type="submit">Search <i className='bx bx-search-alt-2 bx-xs'></i></button>
+                </form>
+            </div>
+            <div className='information-general'>
+            <Location
+                url={locationRandom}/>
+            </div>
+            
+              <ul className='render-characters'>
+                {characterPaginated?.map((character) => (
+                <ResidentInfo
+                key={character}
+                url={character}/> )
+                )}
+                </ul>
+          <div className='paginated'>
+            <button className='button-prev-next'
               onClick={() => setCurrentPage(currentPage - 1)}
               disabled={currentPage === 1}> 
-              Previous
+              <i class='bx bx-first-page'></i>
             </button>
             {pages.map((num) => (
-            <button key={num} onClick={() => setCurrentPage(num)}>
+            <button className="button-pages" key={num} onClick={() => setCurrentPage(num)}>
               {num}
             </button>
           ))}
-            <button
+            <button className='button-prev-next'
               onClick={() => setCurrentPage(currentPage + 1)}
               disabled={currentPage === totalPages}>
-              Next
+              <i class='bx bx-last-page'></i>
             </button>
-      </footer>
+            </div>
+        </div>
+    </section>
     </>
   )
 }

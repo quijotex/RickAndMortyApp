@@ -12,14 +12,16 @@
   --Element-medium: #62ef6b;
   --Defaul-background: #000000;
 }
-
 .header-img {
   background-image: url('./assets/background-header.png');
-
 }
-
-.section-characters {
+.logo-header {
+  width: 100%;
+}
+.section-characters { 
   background-image: url('./assets/background-page.png');
+}
+.div-characters {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,6 +45,11 @@ text-align: center;
   border: 2px solid var(--Element-medium);
   position: relative;
 }
+.hover-button:hover {
+  background-color: var(--Element-medium);
+  color: var(--Defaul-background);
+  cursor: pointer;
+}
 .button-search button .bx {
     position: absolute;
     right: 57px;
@@ -51,17 +58,51 @@ text-align: center;
 #inputId::placeholder {
   text-align: center;
   font-family: 'Fira Code', monospace;
-
 }
 .information-general {
   color: aliceblue;
-  width: 850px;
+  width: 90%;
   height: 120px;
   border: 1px solid rgb(18, 18, 171);
   background-color: #062226;
   font-family: 'Fira Code', monospace;
   display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.welcome {
+  font-family: 'Fira Code', monospace;
+  color: var(--Element-medium);
+}
+.render-characters {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-
+  gap: 20px;
+}
+.paginated {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.paginated button {
+  font-size: 2rem;
+  width: 60px;
+  color: #FBFBFB;
+  background-color: #329f5c00;
+  border-style: none;
+}
+.button-prev-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-prev-next:hover {
+  background-color: var(--Placeholder-text);
+  cursor: pointer;
+}
+.button-pages:hover {
+  background-color: var(--Placeholder-text);
+  cursor: pointer;
 }
