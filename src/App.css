@@ -11,10 +11,7 @@
   --Placeholder-text:  #329f5c ;
   --Element-medium: #62ef6b;
   --Defaul-background: #000000;
-}
-body::-webkit-scrollbar {
-  color: #329f5c;
-}
+} 
 .header-img {
   background-image: url('./assets/background-header.png');
 }
@@ -109,19 +106,74 @@ text-align: center;
   background-color: var(--Placeholder-text);
   cursor: pointer;
 }
-@media  screen and (max-width: 1024px) {
- 
- 
- 
- }
- 
  @media screen and (max-width: 768px) {
- 
+  .paginated {
+    width: 80%;
+  }
+  .information-general {
+   padding: 10px;
+  }
+  #inputId {
+    width: 400px;
+  }
  }
  @media screen and (max-width: 425px) {
+   .residentInfo {
+      width: 90%;
+   }
+   .residentInfo img {
+    width: 100%;
+   }
+   .info-aditional {
+    font-size: 15px;
+   }
+   .paginated {
+    width: 80%;
+  }
+  .information-general {
+    flex-direction: column;
+    width: 70%;
+    height: 400px;
+    gap: 10px;
+  }
+  #inputId {
+    width: 250px;
+  }
+  .button-search button {
+   font-size: 0;
+   width: 80px;
+   bottom: 4px;
+  }
+  .button-search button .bx {
+    top: 20px;
+    left: 30px;
+  }
+  .welcome {
+    text-align: center;
+  }
+  .paginated {
+    justify-content: center;
    
+  }
+  .paginated button {
+    font-size: 1.5rem;
+  }
+  .residentInfo .status {
+    left: 120px;
+  }
+  .span-origin {
+   font-size: 0.7rem;
+  }
+  #inputId::placeholder  {
+    font-size: 0.7rem;
+  }
  }
  @media screen and (max-width: 375px) {
-    
+  .residentInfo .status {
+    left: 90px;
+  }
+  .info-aditional {
+    font-size: 12px;
+   }
  }
  
