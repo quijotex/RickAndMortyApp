@@ -87,7 +87,7 @@ function App() {
             <button className='button-prev-next'
               onClick={() => setCurrentPage(currentPage - 1)}
               disabled={currentPage === 1}> 
-              <i class='bx bx-first-page'></i>
+              <i className='bx bx-first-page'></i>
             </button>
             {pages.map((num) => (
             <button className="button-pages" key={num} onClick={() => setCurrentPage(num)}>
@@ -97,7 +97,7 @@ function App() {
             <button className='button-prev-next'
               onClick={() => setCurrentPage(currentPage + 1)}
               disabled={currentPage === totalPages}>
-              <i class='bx bx-last-page'></i>
+              <i className='bx bx-last-page'></i>
             </button>
             </div>
         </div>

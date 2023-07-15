@@ -12,11 +12,14 @@
   --Element-medium: #62ef6b;
   --Defaul-background: #000000;
 }
+body::-webkit-scrollbar {
+  color: #329f5c;
+}
 .header-img {
   background-image: url('./assets/background-header.png');
 }
 .logo-header {
-  width: 100%;
+ width: 100%;
 }
 .section-characters { 
   background-image: url('./assets/background-page.png');
@@ -106,3 +109,19 @@ text-align: center;
   background-color: var(--Placeholder-text);
   cursor: pointer;
 }
+@media  screen and (max-width: 1024px) {
+ 
+ 
+ 
+ }
+ 
+ @media screen and (max-width: 768px) {
+ 
+ }
+ @media screen and (max-width: 425px) {
+   
+ }
+ @media screen and (max-width: 375px) {
+    
+ }
+ 
