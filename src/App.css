@@ -13,13 +13,13 @@
   --Defaul-background: #000000;
 } 
 .header-img {
-  background-image: url('./assets/background-header.png');
+  background-image: url('./assets/background-header.webp');
 }
 .logo-header {
  width: 100%;
 }
 .section-characters { 
-  background-image: url('./assets/background-page.png');
+  background-image: url('./assets/background-page.webp');
 }
 .div-characters {
   display: flex;
@@ -117,7 +117,7 @@ text-align: center;
     width: 400px;
   }
  }
- @media screen and (max-width: 425px) {
+ @media screen and (max-width: 430px) {
    .residentInfo {
       width: 90%;
    }
@@ -169,11 +169,17 @@ text-align: center;
   }
  }
  @media screen and (max-width: 375px) {
-  .residentInfo .status {
-    left: 90px;
+  #inputId {
+    width: 200px;
   }
-  .info-aditional {
-    font-size: 12px;
+  .button-search button {
+   font-size: 0;
+   width: 80px;
+   bottom: 4px;
+  }
+  
+   .info-aditional .span-specie, .info-aditional .span-origin {
+    margin-left: 100px;
    }
  }
  
