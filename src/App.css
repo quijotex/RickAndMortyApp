@@ -1,5 +1,6 @@
 @import url('./styles/ResidentInfo.css');
 @import url('./styles/Location.css');
+
 *, *::after, *::before {
   padding: 0;
   margin: 0;
@@ -105,6 +106,14 @@ text-align: center;
 .button-pages:hover {
   background-color: var(--Placeholder-text);
   cursor: pointer;
+}
+@media (max-width: 932px) and (orientation: landscape) { 
+  .div-characters button {
+    width: 220px;
+  }
+  .button-search input {
+    width: 500px;
+  }
 }
  @media screen and (max-width: 768px) {
   .paginated {
